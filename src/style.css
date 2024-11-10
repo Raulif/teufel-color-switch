@@ -1,0 +1,85 @@
+:root {
+  --border-colour: #ddd;
+}
+
+/* your styles here */
+.product-details__variants {
+  display: flex;
+  gap: 8px;
+  margin: 0 0 1rem;
+  list-style: none;
+  padding: 0;
+}
+.product-details__variants__button {
+  height: 36px;
+  width: 36px;
+  outline: 1px solid var(--border-colour);
+  border: 2px solid white;
+  cursor: pointer;
+}
+
+.product-details__variants__button[aria-selected="true"],
+.product-details__variants__button:hover,
+.product-details__variants__button:focus,
+.product-details__variants__button:active,
+.product-details__variants__button:focus-visible {
+  outline-color: black;
+}
+
+.button[aria-disabled="true"], .button:disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/* you shouldn't need to change these
+but you can if you'd like */
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: sans-serif;
+}
+
+.product-details {
+  --outer-radius: 0.5rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid var(--border-colour);
+  border-radius: var(--outer-radius);
+}
+
+.product-details__name,
+.product-details__price {
+  margin-bottom: 1rem;
+}
+.price {
+  font-size: 1.5rem;
+}
+
+.button {
+  appearance: none;
+  display: block;
+  width: 100%;
+  padding: 0.8em;
+  border: 0;
+  color: white;
+  background-color: green;
+  cursor: pointer;
+}
+
+.button[aria-selected="true"],
+.button:hover,
+.button:focus,
+.button:active,
+.button:focus-visible {
+  opacity: 0.9;
+}
+
+img {
+  max-width: 100%;
+}
