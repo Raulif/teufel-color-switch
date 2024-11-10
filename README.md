@@ -2,26 +2,29 @@
 
 ## Description
 This is a simple project to display a list of color variants for a product and allow the user to select one of them.<br />
-The project is built with [Vite](https://vitejs.dev/) and [TypeScript](https://www.typescriptlang.org/).<br />
+The project is built with [Vite](https://vitejs.dev/), [TypeScript](https://www.typescriptlang.org/) and [SCSS](https://sass-lang.com/).<br />
 It has a simple translation system to support multiple languages.<br />
 Local URL for development is http://localhost:5173/.
 
-## Download
+
+
+## Project setup
+### Download
 ```
 git clone git@github.com:Raulif/teufel-color-switch.git
 ```
 
-## Project setup
+### Install dependencies
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Compile with hot-reloads for development
 ```
 npm run dev
 ```
 
-### Compiles and minifies for production
+### Compile and minify for production
 ```
 npm run build
 ```
@@ -34,9 +37,7 @@ To test the app with different locales, you can set the cookie to the desired lo
   3. Reload the app.
 
 ## Caveats
-The .env file should be ignored by git, as it contains sensitive information.
-The style has been rewritten in CSS, instead of original SCSS.
-
-
+The .env file should be ignored by git, as it contains sensitive information.<br />
+The format of the price has been changed to make it compatible with the [Intl API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat). The original format is `€99,00`, but the Intl API returns to `99.00 €`. This change has been made consciously, since using the Intl API helps handling locales and currencies.
 
 Created with :heart: by [Raul Iglesias](https://github.com/raulif)
