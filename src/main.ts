@@ -3,6 +3,7 @@ import { getFormattedPrice } from './helpers/price';
 import { getVariants } from './api/variants';
 import { getTranslation } from "./helpers/translations";
 import { BASE_PRODUCT_NAME } from "./constants";
+import "../style.scss";
 
 const selectors = {
   button: ".button",

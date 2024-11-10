@@ -1,4 +1,4 @@
-import { fetchFromApi } from "../helpers/fetch";
+import { fetchFromUrl } from "../helpers/fetch";
 import { ResponseVariant, Variant } from "../types/types";
 
 /**
@@ -11,7 +11,7 @@ const transformVariantsData = (variants: ResponseVariant): Variant[] => {
 
 export const getVariants = async (): Promise<Variant[]> => {
   const url = import.meta.env.VITE_VARIANT_BASE_API_URL ?? ''
-  const { success, data } = await fetchFromApi(url);
+  const { success, data } = await fetchFromUrl(url);
   if (!success) return [];
   return transformVariantsData(data) ?? [];
 }

@@ -33,4 +33,10 @@ To test the app with different locales, you can set the cookie to the desired lo
   2. Change the value of the `DEFAULT_LOCALE` constant in the `constants.ts` file.
   3. Reload the app.
 
+## Caveats
+The .env file should be ignored by git, as it contains sensitive information.
+The style has been rewritten in CSS, instead of original SCSS.
+
+
+
 Created with :heart: by [Raul Iglesias](https://github.com/raulif)
